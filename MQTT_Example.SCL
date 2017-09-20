@@ -65,7 +65,7 @@ BEGIN
         
         myPublishMessageID := mqttPUBLISH( topic := 'SIEMENSTOPIC',
 		                                   messageid := 0, //message id = 0 autogenerate it, > 0 manually set
-                                           payload := publishPayloadData,
+                                           payload := publishPayloadData[0],
                                            payloadLength := publishPayloadLength,
                                            qos := mqttGlobals.MQTTQOS1,
                                            retain := false,
